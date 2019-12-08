@@ -1,0 +1,7 @@
+version: "3"
+services:
+    ldc:
+        build: ./ldc
+        volumes:
+          - "./work:/home/ldc/work"
+
