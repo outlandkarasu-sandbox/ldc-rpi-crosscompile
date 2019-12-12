@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
   build-essential \
   git \
   libxml2 \
+  ninja-build \
+  cmake \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && useradd -m ldc \
@@ -26,6 +28,7 @@ RUN sed -i 's/CipherString = DEFAULT@SECLEVEL=2/#CipherString = DEFAULT@SECLEVEL
 
 RUN su -l -c "curl -fsS https://dlang.org/install.sh | bash -s ldc" - ldc \
   && echo "source ~/dlang/ldc-*/activate" >> /home/ldc/.bashrc
+COPY build_runtime.sh /home/ldc/build_runtime.sh
 
 USER ldc
 WORKDIR /home/ldc
