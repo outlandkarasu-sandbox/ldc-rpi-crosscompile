@@ -3,6 +3,8 @@ services:
     ldc:
         build: ./ldc
         volumes:
-          - "./work:/home/ldc/work"
           - "./dmanshow:/home/ldc/dmanshow"
+          - "ldc_runtime:/home/ldc/ldc-build-runtime.tmp"
+volumes:
+    ldc_runtime:
 

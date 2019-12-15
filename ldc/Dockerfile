@@ -29,8 +29,10 @@ RUN sed -i 's/CipherString = DEFAULT@SECLEVEL=2/#CipherString = DEFAULT@SECLEVEL
 RUN su -l -c "curl -fsS https://dlang.org/install.sh | bash -s ldc" - ldc \
   && echo "source ~/dlang/ldc-*/activate" >> /home/ldc/.bashrc
 COPY build_runtime.sh /home/ldc/build_runtime.sh
+RUN mkdir /home/ldc/ldc-build-runtime.tmp && chown ldc:ldc /home/ldc/ldc-build-runtime.tmp
 
 USER ldc
 WORKDIR /home/ldc
+#RUN /home/ldc/build_runtime.sh
 CMD ["/bin/bash"]
 
