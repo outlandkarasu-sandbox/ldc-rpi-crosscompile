@@ -1,0 +1,13 @@
+{
+	"name": "dmanshow",
+	"authors": [
+		"outland.karasu@gmail.com"
+	],
+	"description": "A d-man viewer.",
+	"copyright": "Copyright © 2019, outland.karasu@gmail.com",
+	"license": "BSL-1.0",
+        "dependencies": {
+                "bindbc-sdl": "~>0.13.0"
+        },
+        "versions": ["BindSDL_Image"]
+}
