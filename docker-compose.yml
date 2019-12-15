@@ -4,4 +4,5 @@ services:
         build: ./ldc
         volumes:
           - "./work:/home/ldc/work"
+          - "./dmanshow:/home/ldc/dmanshow"
 
