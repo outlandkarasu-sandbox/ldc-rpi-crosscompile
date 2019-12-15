@@ -1,8 +1,8 @@
 # Compiled Object files
 *.o
 *.obj
-/dman
-/dman-test-library
+/dmanshow
+/dmanshow-test-library
 
 # Compiled Dynamic libraries
 *.so
